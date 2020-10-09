@@ -32,7 +32,7 @@
               </ul>
 
               <span class="navbar-text">
-                  <a data-toggle="modal" data-target="#loginModal">
+                  <a id="loginButton" type="button" role="button">
                   <span class="fa fa-sign-in"></span> Login</a>
               </span>
          </div>
@@ -88,16 +88,20 @@
                 <div class="col-12 col-sm-3 align-self-center justify-content-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+                <!--
                 <div class="col col-sm align-self-center justify-content-center order-sm-last">
-                    <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="modal" data-target="#reserveform">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning">Reserve Table</a>
+                </div>
+                -->
+                <div class="col col-sm align-self-center justify-content-center order-sm-last">
+                    <a id="reserveButton" type="button" role="button" class="btn btn-block btn-sm btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
 
             <!-- Reserve a table page !-->
-            <div id="reserveform" class="modal fade" role="dialog">
+            <div id="reserveModal" class="modal fade" role="dialog">
                 <div class="modal-dialog modal-lg" role="content">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -397,30 +401,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- "Remove toggle script"
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    !-->
-    <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');
-                }
-            });
-        });
-    </script>
+    <script src="js\scripts.js"></script>
 
 </body>
 
